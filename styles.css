@@ -1,0 +1,120 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #87CEEB; /* Light blue background like a desktop */
+}
+
+.taskbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.taskbar button {
+    background: #0078d4;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.taskbar button:hover {
+    background: #005a9e;
+}
+
+.desktop {
+    position: relative;
+    width: 100vw;
+    height: calc(100vh - 50px); /* Reserve space for the taskbar */
+}
+
+.window {
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    background: white;
+    border: 2px solid #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    font-family: Arial, sans-serif;
+    resize: both;
+    overflow: auto;
+}
+
+.titlebar {
+    background: #0078d4;
+    color: white;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: move;
+    user-select: none;
+}
+
+.close-button, .minimize-button, .restore-button {
+    background: #e81123;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+.minimize-button {
+    background: #ffb900;
+}
+
+.restore-button {
+    background: #0078d4;
+}
+
+.window.minimized {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+/* styles.css */
+
+/* Existing styles */
+
+.settings-content {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.settings-content label {
+    margin: 10px 0 5px;
+}
+
+.settings-content input[type="text"],
+.settings-content input[type="number"] {
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.settings-content button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #0078d4;
+    color: white;
+    cursor: pointer;
+}
+
+.settings-content button:hover {
+    background-color: #005a9e;
+}
